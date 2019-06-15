@@ -1,0 +1,5 @@
+METHOD (\[.*])
+NUMBER (?=225)[0-9]{11}
+ACT (?=\{\").*(?>\}\})
+ACT2 (?>\{activationJobId).*(?>\'\})
+ACT3 (?>\{type).*

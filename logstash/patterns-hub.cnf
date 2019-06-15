@@ -1,0 +1,7 @@
+CUSTOMER_NUMBER [0-9]{13}((?=</senderAddress>)|(?=</address>))
+SMSMESSAGE \b[0-9EeXxiItT]{1,4}(?=</message>)
+SMSANUM [0-9]{3}(?=</smsServiceActivationNumber>)
+SMSTYPE %{CISCO_REASON}(?=\n)
+SMSID (?=%{SPACE})%{NUMBER}(?=\n)
+CORRELATOR ([0-9]*|NA)_([0-9]*|NA)_([0-9]*|NA)_([0-9]*|NA)
+DELIVERYSTATUS (?<=<deliveryStatus>).*(?=\<\/deliveryStatus>)
